@@ -1,5 +1,6 @@
 import os
 import time
+import send_from_Gmail_to_AnotherMail as sendmail
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -71,6 +72,7 @@ while True:
             driver.implicitly_wait(2)
 
             if driver.find_elements(By.ID, 'isFalseGotoMain'):
+                sendmail.main()
                 is_booked=True
                 print("예약 성공")
                 break
